@@ -1,10 +1,27 @@
 import mongoose from 'mongoose';
+import { snowflakeId } from '../utils/snowflake.js';
 
 const communitySchema = new mongoose.Schema({
-  id: { type: String, required: true, unique: true },
-  name: { type: String, required: true },
-  slug: { type: String, required: true, unique: true },
-  owner: { type: String, required: true }, // user ID
+    _id: {
+    type: String,
+    default: () => snowflakeId(),
+    },
+    name: {
+    type: String,
+    required: true,
+    unique: true,
+    },
+    slug: {
+    type: String,
+    required: true,
+    unique: true,
+    },
+    owner: {
+    type: String,
+    ref: 'User',
+    required: true,
+    }
 }, { timestamps: true });
 
-export default mongoose.model('Community', communitySchema);
+const Community = mongoose.model('Community', communitySchema);
+export default Community;

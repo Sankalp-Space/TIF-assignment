@@ -1,8 +1,18 @@
 import mongoose from 'mongoose';
+import { snowflakeId } from '../utils/snowflake.js';
+import Member from './Member.js';
 
 const roleSchema = new mongoose.Schema({
-  id: { type: String, required: true, unique: true },
-  name: { type: String, required: true, unique: true },
+    _id: {
+    type: String,
+    default: () => snowflakeId(),
+    },
+    name: {
+    type: String,
+    required: true,
+    unique: true,
+    }
 }, { timestamps: true });
 
-export default mongoose.model('Role', roleSchema);
+const Role = mongoose.model('Role', roleSchema);
+export default Member;

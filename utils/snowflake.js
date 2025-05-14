@@ -1,3 +1,7 @@
-export const generateSnowflakeId = () => {
-  return Date.now().toString(36) + Math.random().toString(36).substr(2, 5);
-};
+// utils/snowflake.js
+import pkg from '@theinternetfolks/snowflake';
+const { generate } = pkg;
+
+export function snowflakeId() {
+    return generate();
+}
