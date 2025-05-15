@@ -67,7 +67,7 @@ Now you can use your favorite API testing wand (like Postman or `curl`) to inter
 
 ## Deployed URL
 
-Try it live: **[Deployemnt URL](https://imagify1-13gr.onrender.com)**
+Try it live: **[Deployemnt URL](https://tif-assignment-xlm7.onrender.com)**
 
 ---
 ## Postman APIs Collection
