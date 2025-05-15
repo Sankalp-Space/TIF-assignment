@@ -64,6 +64,4 @@ Our digital world is built upon these fundamental structures:
 
 Now you can use your favorite API testing wand (like Postman or `curl`) to interact with the endpoints above.
 
-## 
 
- to 
