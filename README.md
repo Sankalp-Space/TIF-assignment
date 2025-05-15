@@ -65,3 +65,15 @@ Our digital world is built upon these fundamental structures:
 Now you can use your favorite API testing wand (like Postman or `curl`) to interact with the endpoints above.
 
 
+## Deployed URL
+
+Try it live: **[Deployemnt URL](https://imagify1-13gr.onrender.com)**
+
+---
+## Postman APIs Collection
+
+Check it: **[Postman APIs Collections](https://www.postman.com/api-testing-7092/workspace/mangojelly/collection/36163184-8c54d603-286f-41b0-83b5-310cee0799a5?action=share&creator=36163184)**
+
+---
+
+
