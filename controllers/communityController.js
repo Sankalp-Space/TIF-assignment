@@ -15,7 +15,6 @@ export const createCommunity = async (req, res) => {
             owner: req.user.id,
         });
 
-        // Assign Community Admin role to the creator
         const adminRole = await Role.findOne({ name: 'Community Admin' });
         if (adminRole) {
             await Member.create({

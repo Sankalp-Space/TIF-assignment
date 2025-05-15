@@ -21,7 +21,6 @@ export const addMember = async (req, res) => {
             return res.status(409).json({ status: false, error: 'User is already a member of this community' });
         }
 
-        // Basic authorization: Only owner can add (can be expanded)
         if (community.owner.toString() !== req.user.id) {
             return res.status(403).json({ status: false, error: 'Only the community owner can add members' });
         }
@@ -47,8 +46,6 @@ export const removeMember = async (req, res) => {
         if (!member) {
             return res.status(404).json({ status: false, error: 'Member not found' });
         }
-
-        // Basic authorization: Only owner can remove (can be expanded)
         if (member.community.owner.toString() !== req.user.id) {
             return res.status(403).json({ status: false, error: 'Only the community owner can remove members' });
         }
