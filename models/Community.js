@@ -9,12 +9,16 @@ const communitySchema = new mongoose.Schema({
     name: {
     type: String,
     required: true,
-    unique: true,
+    unique: false, // Removed unique constraint as names might not always be unique
+    maxLength: 128,
     },
     slug: {
     type: String,
     required: true,
     unique: true,
+    maxLength: 255,
+    lowercase: true,
+    trim: true,
     },
     owner: {
     type: String,

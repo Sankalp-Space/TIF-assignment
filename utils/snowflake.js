@@ -1,7 +1,6 @@
-// utils/snowflake.js
-import pkg from '@theinternetfolks/snowflake';
-const { generate } = pkg;
+
+import { Snowflake } from '@theinternetfolks/snowflake';
 
 export function snowflakeId() {
-    return generate();
+    return Snowflake.generate();
 }
